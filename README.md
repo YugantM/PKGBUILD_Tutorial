@@ -10,3 +10,13 @@ tutorial for PKGBUILD scripts
 	* Settings for Virtual Box
 		* Go to setting>>Network>>Adapter1>>"Select Bridge Adapter from the dropdown of Attached to" (Enable Network Adapter)
 		* Go to setting>>Display>>"Change scale factor to 200%" [optional setting but will help :)]
+	* Commands to start the SSH connection
+		* ```sh
+			$ sodu systemctl start SSHD
+			$ sodu systemctl enable SSHD
+			```
+	* Above will start the connection following commands will help to check the IP address for the connection and check the connection status respectively.
+		* ```sh
+			$ IP a
+			$ sodu systemctl status SSHD
+			```
