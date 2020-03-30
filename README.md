@@ -20,3 +20,12 @@ tutorial for PKGBUILD scripts
 	$ IP a
 	$ sodu systemctl status SSHD
 	```
+	* Set password for the current user[currently using root]
+	```sh
+	$ passwd
+	```
+	Enter password for the connection and re-enter to set the password.
+	* Commands to connect with the SSH connection from host
+	```sh
+	$ ssh <user>@<IP_ADDRESS>
+	```
