@@ -12,8 +12,8 @@ tutorial for PKGBUILD scripts
 		* Go to setting>>Display>>"Change scale factor to 200%" [optional setting but will help :)]
 	* Commands to start the SSH connection
 	```sh
-	$ sodu systemctl start SSHD
-	$ sodu systemctl enable SSHD
+	$ sodu systemctl start service.sshd
+	$ sodu systemctl enable service.sshd
 	```
 	* Above will start the connection following commands will help to check the IP address for the connection and check the connection status respectively.
 	```sh
