@@ -32,7 +32,18 @@ tutorial for PKGBUILD scripts
 		```sh
 		$ lsblk
 		```
-		
+		* To manipulate the partition
+		```sh
+		$ fdisk /dev/sda
+		```		
+		* To create a DOS disklabel
+		```sh
+		$ o <ENTER>
+		```
+		* To create a new partition
+		```sh
+		$ n <ENTER>
+		```				
 		
 
 
