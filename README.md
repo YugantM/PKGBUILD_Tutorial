@@ -43,7 +43,21 @@ tutorial for PKGBUILD scripts
 		* To create a new partition
 		```sh
 		$ n <ENTER>
-		```				
+		```		
+		* To set the new partition as primary partition
+		```sh
+		$ p <ENTER>
+		```
+		* Set partition number to 1
+		```sh
+		$ 1 <ENTER>
+		$ <ENTER>
+		```
+		* Set size of partition to 200MB
+		```sh
+		$ +200M <ENTER>
+		```
+
 		
 
 
