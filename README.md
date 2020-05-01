@@ -23,7 +23,7 @@ tutorial for PKGBUILD scripts
 		* Start the VM
 		* Select the first option "Boot Arch Linux (x86_64)"
 
-	* Enter the followinf commands:
+	* Enter the following commands:
 		* To set the date and time
 		```sh
 		$ timedatectl set-ntp true
