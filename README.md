@@ -69,7 +69,7 @@ tutorial for PKGBUILD scripts
 		```sh
 		$ 2 <ENTER>
 		$ <ENTER>
-		$ <ENTER> // to set the rest of the memory to this partition (default)
+		$ <ENTER> # to set the rest of the memory to this partition (default)
 		```
 
 
