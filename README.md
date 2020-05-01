@@ -6,10 +6,26 @@ tutorial for PKGBUILD scripts
 
 1. Install VirtualBox [Hyperlink](https://www.virtualbox.org/wiki/Downloads)
 2. Download Image of ArchLinux [Hyperlink](https://www.archlinux.org/download/)
-3. Setting up SSH connection from Virtual OS to host OS
+3. Setting up Virtual Box to load the iso file and get the set-up started
 	* Settings for Virtual Box
-		* Go to setting>>Network>>Adapter1>>"Select Bridge Adapter from the dropdown of Attached to" (Enable Network Adapter)
+		* Click on New
+		* Give the image a name
+		* Memory size 4 GB(4096 MB) preferred
+		* Select "Create a Virtual Hard Disk now"
+		* Select VDI
+		* "Dynamically Allocated"
+		* Set size to 10 GB
+		* Go to setting>>System>>Processor>>Set processors to 2 or more if you have multi cores running in the host system
 		* Go to setting>>Display>>"Change scale factor to 200%" [optional setting but will help :)]
+		* Go to setting>>Storage>> Give the path of .iso file to "Controller:IDE"
+		* Go to setting>>Network>>Adapter1>>"Select Bridge Adapter from the dropdown of Attached to" (Enable Network Adapter)
+		* Start the VM
+		* Select the first option "Boot Arch Linux (x86_64)"
+		
+		
+		
+
+
 	* Commands to start the SSH connection
 	```sh
 	$ sodu systemctl start service.sshd
