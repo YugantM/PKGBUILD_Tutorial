@@ -23,6 +23,15 @@ tutorial for PKGBUILD scripts
 		* Start the VM
 		* Select the first option "Boot Arch Linux (x86_64)"
 
+	* Enter the followinf commands:
+		* To set the date and time
+		```sh
+		$ timedatectl set-ntp true
+		```
+		* To list all the partitions on the disk
+		```sh
+		$ lsblk
+		```
 		
 		
 
