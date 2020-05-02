@@ -57,6 +57,10 @@ tutorial for PKGBUILD scripts
 		```sh
 		$ +200M <ENTER>
 		```
+		* Make the partition bootable
+		```sh
+		$ a <ENTER>
+		```
 		* To create a new partition
 		```sh
 		$ n <ENTER>
