@@ -99,6 +99,10 @@ tutorial for PKGBUILD scripts
 		# base is for installing arch 
 		# base-devel is for installing the development tools for the arch
 		```
+		* To generate [fsab](https://www.archlinux.org/download/) file
+		```sh
+		$ genfstab -U /mnt >> /mnt/etc/fstab <ENTER>		
+		```
 		
 
 		
