@@ -103,6 +103,11 @@ tutorial for PKGBUILD scripts
 		```sh
 		$ genfstab -U /mnt >> /mnt/etc/fstab <ENTER>		
 		```
+		* Switching the root to the VDI
+		```sh
+		$ arch-chroot /mnt <ENTER>		
+		```
+		
 		
 
 		
