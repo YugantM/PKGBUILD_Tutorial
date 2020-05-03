@@ -81,12 +81,12 @@ tutorial for PKGBUILD scripts
 		```
 		* Format both the partitions
 		```sh
-		$ mkfs.ext4 /dev/sda1<ENTER>
-		$ mkfs.ext4 /dev/sda2<ENTER>
+		$ mkfs.ext4 /dev/sda1 <ENTER>
+		$ mkfs.ext4 /dev/sda2 <ENTER>
 		```
 		* Before mounting the partitions create required directories
 		```sh
-		$ mkdir /mnt/boot /mnt/home<ENTER>
+		$ mkdir /mnt/boot /mnt/home <ENTER>
 		```
 		* Mount both the partitions
 		```sh
@@ -95,7 +95,9 @@ tutorial for PKGBUILD scripts
 		```
 		* To install arch in the VDI
 		```sh
-		$ pacstrap base base-devel <ENTER> # base is for installing arch and base-devel is for installing the development tools for the arch
+		$ pacstrap base base-devel <ENTER> 
+		# base is for installing arch 
+		# base-devel is for installing the development tools for the arch
 		```
 		
 
