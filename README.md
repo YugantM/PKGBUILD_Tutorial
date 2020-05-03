@@ -75,10 +75,13 @@ tutorial for PKGBUILD scripts
 		$ <ENTER>
 		$ <ENTER> # to set the rest of the memory to this partition (default)
 		```
-
-
+		* To alter the partition table
+		```sh
+		$ w <ENTER>
+		```
 		
 
+		
 
 	* Commands to start the SSH connection
 	```sh
