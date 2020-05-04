@@ -107,6 +107,15 @@ tutorial for PKGBUILD scripts
 		```sh
 		$ arch-chroot /mnt <ENTER>		
 		```
+		* Install mkinitcpio 
+		```sh
+		$ pacman -Sy mkinitcpio <ENTER>		
+		```
+		* Install linux and linux-firmware 
+		```sh
+		$ pacman -Sy linux <ENTER>	
+		$ pacman -Sy linux-firmware <ENTER>	
+		```
 		
 		
 
