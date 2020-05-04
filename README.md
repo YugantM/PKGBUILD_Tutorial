@@ -116,6 +116,28 @@ tutorial for PKGBUILD scripts
 		$ pacman -Sy linux <ENTER>	
 		$ pacman -Sy linux-firmware <ENTER>	
 		```
+		* To create initial RAM disk
+		```sh
+		$ mkinitcpio -p linux<ENTER>	
+		```
+		* To install grub
+		```sh
+		$ pacman -S grub<ENTER>	
+		```
+		* Switch to primary Arch-Linux
+		```sh
+		$ grub-install --target=i386-pc /dev/sda<ENTER>	
+		```
+		* Configure grub
+		```sh
+		$ grub-mkconfig -o /boot/grub/grub.cfg<ENTER>	
+		```
+		* Set password
+		```sh
+		$ passwd<ENTER>	
+		```
+		
+		
 		
 		
 
