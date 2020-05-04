@@ -136,15 +136,23 @@ tutorial for PKGBUILD scripts
 		```sh
 		$ passwd<ENTER>	
 		```
-		
-		
-		
-		
-
-		
-		
-
-		
+		* Install nano to edit files
+		```sh
+		$ pacman -S nano<ENTER>	
+		```
+		* Set timezone
+		```sh
+		$ ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+		```
+		* Remove the mountings
+		```sh
+		$ umount /mnt/boot <ENTER>
+		$ umount /mnt
+		```
+		* Shutdown the Virtual Box
+		* Remove the iso file
+		* Boot again
+	
 
 	* Commands to start the SSH connection
 	```sh
