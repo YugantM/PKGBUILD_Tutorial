@@ -118,36 +118,45 @@ tutorial for PKGBUILD scripts
 		```
 		* To create initial RAM disk
 		```sh
-		$ mkinitcpio -p linux<ENTER>	
+		$ mkinitcpio -p linux <ENTER>	
 		```
 		* To install grub
 		```sh
-		$ pacman -S grub<ENTER>	
+		$ pacman -S grub <ENTER>	
 		```
 		* Switch to primary Arch-Linux
 		```sh
-		$ grub-install --target=i386-pc /dev/sda<ENTER>	
+		$ grub-install --target=i386-pc /dev/sda <ENTER>	
 		```
 		* Configure grub
 		```sh
-		$ grub-mkconfig -o /boot/grub/grub.cfg<ENTER>	
+		$ grub-mkconfig -o /boot/grub/grub.cfg <ENTER>	
 		```
 		* Set password
 		```sh
-		$ passwd<ENTER>	
+		$ passwd <ENTER>	
 		```
 		* Install nano to edit files
 		```sh
-		$ pacman -S nano<ENTER>	
+		$ pacman -S nano <ENTER>	
 		```
 		* Set timezone
 		```sh
-		$ ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+		$ ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime <ENTER>	
+		```
+		* Update system packages
+		```sh
+		$ pacman -Syu <ENTER>	
+		```
+		* Install dhcpcd and run it to make internet working if it is not
+		```sh
+		$ pacman -S dhcpcd <ENTER>	
+		$ dhcpcd <ENTER>	
 		```
 		* Remove the mountings
 		```sh
 		$ umount /mnt/boot <ENTER>
-		$ umount /mnt
+		$ umount /mnt <ENTER>	
 		```
 		* Shutdown the Virtual Box
 		* Remove the iso file
