@@ -153,6 +153,10 @@ tutorial for PKGBUILD scripts
 		$ pacman -S dhcpcd <ENTER>	
 		$ dhcpcd <ENTER>	
 		```
+		* Install openssh
+		```sh
+		$ pacman -S openssh <ENTER>		
+		```
 		* Remove the mountings
 		```sh
 		$ umount /mnt/boot <ENTER>
