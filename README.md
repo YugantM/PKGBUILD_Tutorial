@@ -152,6 +152,7 @@ tutorial for PKGBUILD scripts
 		```sh
 		$ pacman -S dhcpcd <ENTER>	
 		$ dhcpcd <ENTER>	
+		$ sudo systemctl start dhcpcd.service
 		$ sudo systemctl enable dhcpcd.service
 		```
 		* Install openssh
