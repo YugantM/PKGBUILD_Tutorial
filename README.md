@@ -148,10 +148,11 @@ tutorial for PKGBUILD scripts
 		```sh
 		$ pacman -Syu <ENTER>	
 		```
-		* Install dhcpcd and run it to make internet working if it is not
+		* Install dhcpcd and run it to make internet working if it is not and enable it for autostart
 		```sh
 		$ pacman -S dhcpcd <ENTER>	
 		$ dhcpcd <ENTER>	
+		$ sudo systemctl enable dhcpcd.service
 		```
 		* Install openssh
 		```sh
@@ -165,12 +166,18 @@ tutorial for PKGBUILD scripts
 		* Shutdown the Virtual Box
 		* Remove the iso file
 		* Boot again
-	
+
+	* Creating an user and adding it to wheel[group]
+	```sh
+	$ useradd -m -g users -s /bin/bash <USERNAME>
+	$ passwd <USERNAME>
+	$ gpasswd -a <USERNAME> wheel
+	```
 
 	* Commands to start the SSH connection
 	```sh
-	$ sodu systemctl start service.sshd
-	$ sodu systemctl enable service.sshd
+	$ sodu systemctl start sshd.service
+	$ sodu systemctl enable sshd.service
 	```
 	* Above will start the connection following commands will help to check the IP address for the connection and check the connection status respectively.
 	```sh
