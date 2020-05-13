@@ -183,7 +183,7 @@ tutorial for PKGBUILD scripts
 	* Above will start the connection following commands will help to check the IP address for the connection and check the connection status respectively.
 	```sh
 	$ IP a
-	$ sodu systemctl status SSHD
+	$ sudo systemctl status SSHD
 	```
 	* Set password for the current user[currently using root]
 	```sh
