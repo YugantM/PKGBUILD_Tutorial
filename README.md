@@ -226,5 +226,5 @@ Create a smb server, edit files from host OS (for more info: [hyperlink](https:/
 	```
 * Connect to the server using following command:
 	```sh
-	$ open 'smb:server_address'
+	$ open 'smb://server_address'
 	```
