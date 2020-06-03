@@ -210,14 +210,14 @@ tutorial for PKGBUILD scripts
 	$ /etc/samba/smb.conf
 	```
 	* Write following parameters to the config file
-	```html
+	```python
 	 logging = systemd
 	 [public]
 		comments = write description of this share
 		path = <path of the directory for sharing>
 		public = yes
 		read only = no
-		write list = yugant <div color="red"> name of the user for write access on the directory </div>
+		write list = yugant  #name of the user for write access on the directory 
 	```
 	* After that, start the smb server using following command:
 	```sh
