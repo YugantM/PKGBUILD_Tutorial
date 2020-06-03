@@ -194,3 +194,6 @@ tutorial for PKGBUILD scripts
 	```sh
 	$ ssh <user>@<IP_ADDRESS>
 	```
+	## Extras
+	Create a smb server, edit files from host OS
+
