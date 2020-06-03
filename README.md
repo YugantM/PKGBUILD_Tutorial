@@ -217,7 +217,7 @@ tutorial for PKGBUILD scripts
 		path = <path of the directory for sharing>
 		public = yes
 		read only = no
-		write list = yugant #name of the user for write access on the directory
+		write list = yugant <div color="red"> name of the user for write access on the directory </div>
 	```
 	* After that, start the smb server using following command:
 	```sh
