@@ -194,22 +194,23 @@ tutorial for PKGBUILD scripts
 	```sh
 	$ ssh <user>@<IP_ADDRESS>
 	```
-	## Extras
-	Create a smb server, edit files from host OS (for more info: [hyperlink](https://wiki.archlinux.org/index.php/Samba))
-	* Install samba package using following command
+
+## Extras
+Create a smb server, edit files from host OS (for more info: [hyperlink](https://wiki.archlinux.org/index.php/Samba))
+* Install samba package using following command
 	```sh
 	$ pacman -S samba
 	```
-	* Samba uses system users with different password. Add/Change create password for an user by following commands:
+* Samba uses system users with different password. Add/Change create password for an user by following commands:
 	```sh
 	$ smbpasswd -a <USERNAME>
 	$ smbpasswd samba_user #for changing the password
 	```
-	* Create a configuration file (smb.conf) for the smb server in the following path.
+* Create a configuration file (smb.conf) for the smb server in the following path.
 	```sh
 	$ /etc/samba/smb.conf
 	```
-	* Write following parameters to the config file
+* Write following parameters to the config file
 	```python
 	 logging = systemd
 	 [public]
@@ -219,7 +220,7 @@ tutorial for PKGBUILD scripts
 		read only = no
 		write list = yugant  #name of the user for write access on the directory 
 	```
-	* After that, start the smb server using following command:
+* After that, start the smb server using following command:
 	```sh
 	$ systemctl start smb.service
 	```
