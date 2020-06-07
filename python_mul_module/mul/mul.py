@@ -1,6 +1,6 @@
 import sys
 
-def add(x,y):
+def mul(x,y):
     print(x*y)
     return x*y
     
