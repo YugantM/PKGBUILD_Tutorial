@@ -10,18 +10,18 @@ source=("${_dir}"::"git+https://github.com/YugantM/PKGBUILD_Tutorial.git")
 md5sums=('SKIP')
 
 build() {
-
   cd "${srcdir}/${_dir}"
   rm -rf libadd_cpp, calculator_cpp, python_add_module, python_calc_module
   cd "python_mul_module"
   python setup.py build
+}
 
+check() {
+  cd "${_dir}/python_mul_module/${_dir}"
+  python test_mul.py
 }
 
 package() {
-
   cd "${_dir}/python_mul_module"
-
   python setup.py install --root="$pkgdir/" --optimize=1 --skip-build
-
 }
