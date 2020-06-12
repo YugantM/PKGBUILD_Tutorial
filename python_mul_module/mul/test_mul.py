@@ -1,7 +1,7 @@
 import unittest
 import mul
 
-class TestClass(unittest, TestCase):
+class TestClass(unittest.TestCase):
 	def test_function(self):
 		result = mul.mul(2,6)
 		self.assertEqual(result,12)
