@@ -18,7 +18,7 @@ build() {
 
 check() {
   cd "${_dir}/python_mul_module/${_dir}"
-  python test_mul.py
+  python "test_${_dir}.py"
 }
 
 package() {
