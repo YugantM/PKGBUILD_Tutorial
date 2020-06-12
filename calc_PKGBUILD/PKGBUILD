@@ -1,0 +1,26 @@
+pkgname=calc
+pkgver=1.0
+pkgrel=1
+pkgdesc="calculator with two functionality, takes three arguments as input."
+arch=("any")
+makedepends=("python" "add" "mul")
+url="https://github.com/YugantM/PKGBUILD_Tutorial/python_calc_module"
+_dir="calc"
+source=("${_dir}"::"git+https://github.com/YugantM/PKGBUILD_Tutorial.git")
+md5sums=('SKIP')
+
+build() {
+
+  cd "${srcdir}/${_dir}"
+  rm -rf libadd_cpp, calculator_cpp, python_add_module, python_mul_module
+  cd "python_calc_module"
+  python setup.py build
+
+}
+
+package() {
+
+  cd "${_dir}/python_calc_module"
+  python setup.py install --root="$pkgdir/" --optimize=1 --skip-build
+
+}
