@@ -7,7 +7,10 @@ setup(
   description = 'This package returns calctiplication of two integers.',   
   url = 'https://github.com/YugantM/python_calc_module',   
   download_url = 'https://github.com/YugantM/python_calc_module.git',  
-  
+  install_requires=[
+          'add',
+	  'mul'
+      ],  
   keywords = ['add','multiplication', 'calculation'],  
   
   classifiers=[
