@@ -4,7 +4,7 @@ pkgrel=1
 pkgdesc="Adds to integers, takes two arguments as input."
 arch=("any")
 makedepends=('python')
-url="https://github.com/YugantM/PKGBUILD_Tutorial"
+url="https://github.com/YugantM/PKGBUILD_Tutorial/python_add_module"
 _dir="add"
 source=("${_dir}"::"git+https://github.com/YugantM/PKGBUILD_Tutorial.git")
 md5sums=('SKIP')
@@ -12,7 +12,6 @@ md5sums=('SKIP')
 ls
 echo "$pwd"
 build() {
-
   cd "${srcdir}/${_dir}" 
   rm -rf libadd_cpp, calculator_cpp, python_mul_module, python_calc_module
   cd "python_add_module"
@@ -20,10 +19,12 @@ build() {
 
 }
 
+check() {
+  cd "${_dir}/python_add_module/${_dir}"
+  python "test_${_dir}.py"
+}
+
 package() {
-  
   cd "${_dir}/python_add_module"
-
   python setup.py install --root="$pkgdir/" --optimize=1 --skip-build
-
 }
