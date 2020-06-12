@@ -4,8 +4,8 @@ import mul
 
 def calc(o,a,b):
    if o==0:
-      print(add(a,b))
-      return add(a,b)
+      print(add.add(a,b))
+      return add.add(a,b)
    if o==1:
       print(mum(a,b))
       return mul(a,b)
