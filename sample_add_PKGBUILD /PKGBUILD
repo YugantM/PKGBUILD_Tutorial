@@ -13,7 +13,7 @@ ls
 echo "$pwd"
 build() {
   cd "${srcdir}/${_dir}" 
-  rm -rf libadd_cpp, calculator_cpp, python_mul_module, python_calc_module
+  rm -rf libadd_cpp, calculator_cpp, python_mul_module, python_calc_module, python_add_module
   cd "sample_module"
   python setup.py build
 
@@ -25,6 +25,6 @@ build() {
 #}
 
 package() {
-  cd "${_dir}/python_add_module"
+  cd "${_dir}/sample_module"
   python setup.py install --root="$pkgdir/" --optimize=1 --skip-build
 }
