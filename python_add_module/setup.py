@@ -7,7 +7,10 @@ setup(
   description = 'This package returns addition of two integers.',   
   url = 'https://github.com/YugantM/python_add_module',   
   download_url = 'https://github.com/YugantM/python_add_module.git',
-  scripts=['scripts/xmlproc_parse', 'scripts/xmlproc_val'],
+  entry_points = {
+              'console_scripts': [
+                  'add = add.__main__:main',                  
+              ],        
   
   keywords = ['addition', 'calculation'],  
   
