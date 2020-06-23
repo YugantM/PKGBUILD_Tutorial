@@ -14,7 +14,7 @@ echo "$pwd"
 build() {
   cd "${srcdir}/${_dir}" 
   rm -rf libadd_cpp, calculator_cpp, python_mul_module, python_calc_module
-  cd "python_add_module"
+  cd "sample_module"
   python setup.py build
 
 }
