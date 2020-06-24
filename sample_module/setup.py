@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 setup(
   name = 'add',         
   packages = ['add'],   
@@ -7,10 +7,7 @@ setup(
   description = 'This package returns addition of two integers.',   
   url = 'https://github.com/YugantM/python_add_module',   
   download_url = 'https://github.com/YugantM/python_add_module.git',
-  entry_points = {
-              'console_scripts': ['add = add:main',],
-              },
-  
+  scripts= ["bin/add"],
   keywords = ['addition', 'calculation'],  
   
   classifiers=[
