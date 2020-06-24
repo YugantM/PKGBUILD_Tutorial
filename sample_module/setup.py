@@ -1,12 +1,14 @@
 from setuptools import setup
 setup(
   name = 'add',         
-  packages = ['add'],   
+  packages = ['add'],
+  py_modules=['add'],   
   version = '1.0',      
   license='MIT',        
   description = 'This package returns addition of two integers.',   
   url = 'https://github.com/YugantM/python_add_module',   
   download_url = 'https://github.com/YugantM/python_add_module.git',
+  #install_requires=['Click',],
   entry_points = {
         'console_scripts': ['add=add:add'],
     },
