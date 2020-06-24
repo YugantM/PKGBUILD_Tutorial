@@ -4,7 +4,7 @@ def add(x,y):
     print(x+y)
     return x+y    
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     if len(sys.argv) == 3:
         add(int(sys.argv[1]),int(sys.argv[2]))
         #return (int(sys.argv[1])+int(sys.argv[2]))
