@@ -9,8 +9,6 @@ _dir="add"
 source=("${_dir}"::"git+https://github.com/majorx234/python-add.git")
 md5sums=('SKIP')
 
-ls
-echo "$pwd"
 build() {
   cd "${srcdir}/${_dir}" 
   python setup.py build
