@@ -6,7 +6,7 @@ arch=("any")
 makedepends=('python')
 url="https://github.com/YugantM/PKGBUILD_Tutorial/python_add_module"
 _dir="add"
-source=("${_dir}"::"git+https://github.com/YugantM/python_add_module.git")
+source=("${_dir}"::"git+https://github.com/majorx234/python-add.git")
 md5sums=('SKIP')
 
 ls
@@ -17,12 +17,7 @@ build() {
 
 }
 
-check() {
-  cd "${_dir}/python_add_module/${_dir}"
-  python "test_${_dir}.py"
-}
-
 package() {
-  cd "${_dir}/python_add_module"
+  cd "${_dir}"
   python setup.py install --root="$pkgdir/" --optimize=1 --skip-build
 }
