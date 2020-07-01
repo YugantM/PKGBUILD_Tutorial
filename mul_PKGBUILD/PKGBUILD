@@ -1,0 +1,27 @@
+pkgname=mul
+pkgver=1.0
+pkgrel=1
+pkgdesc="Multiplies to integers, takes two arguments as input."
+arch=("any")
+makedepends=('python')
+url="https://github.com/YugantM/PKGBUILD_Tutorial/python_mul_module"
+_dir="mul"
+source=("${_dir}"::"git+https://github.com/YugantM/PKGBUILD_Tutorial.git")
+md5sums=('SKIP')
+
+build() {
+  cd "${srcdir}/${_dir}"
+  rm -rf libadd_cpp, calculator_cpp, python_add_module, python_calc_module
+  cd "python_mul_module"
+  python setup.py build
+}
+
+check() {
+  cd "${_dir}/python_mul_module/${_dir}"
+  python "test_${_dir}.py"
+}
+
+package() {
+  cd "${_dir}/python_mul_module"
+  python setup.py install --root="$pkgdir/" --optimize=1 --skip-build
+}
