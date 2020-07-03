@@ -1,0 +1,12 @@
+digraph G { START [color=red, style=filled];
+node [style=filled, color=green];
+ "START" -> "patch";
+"patch" -> "glibc" [color=chocolate4];
+"glibc" -> "linux-api-headers>=4.10" [color=chocolate4];
+"linux-api-headers>=4.10" -> "linux-api-headers" [arrowhead=none, color=grey];
+"glibc" -> "tzdata" [color=chocolate4];
+"glibc" -> "filesystem" [color=chocolate4];
+"filesystem" -> "iana-etc" [color=chocolate4];
+"patch" -> "attr" [color=chocolate4];
+"attr" -> "glibc" [color=chocolate4];
+}

@@ -1,0 +1,28 @@
+digraph G { START [color=red, style=filled];
+node [style=filled, color=green];
+ "START" -> "zstd";
+"zstd" -> "zlib" [color=chocolate4];
+"zlib" -> "glibc" [color=chocolate4];
+"glibc" -> "linux-api-headers>=4.10" [color=chocolate4];
+"linux-api-headers>=4.10" -> "linux-api-headers" [arrowhead=none, color=grey];
+"glibc" -> "tzdata" [color=chocolate4];
+"glibc" -> "filesystem" [color=chocolate4];
+"filesystem" -> "iana-etc" [color=chocolate4];
+"zstd" -> "xz" [color=chocolate4];
+"xz" -> "sh" [color=chocolate4];
+"sh" -> "bash" [arrowhead=none, color=grey];
+"bash" -> "readline>=7.0" [color=chocolate4];
+"readline>=7.0" -> "readline" [arrowhead=none, color=grey];
+"readline" -> "glibc" [color=chocolate4];
+"readline" -> "ncurses" [color=chocolate4];
+"ncurses" -> "glibc" [color=chocolate4];
+"ncurses" -> "gcc-libs" [color=chocolate4];
+"gcc-libs" -> "glibc>=2.27" [color=chocolate4];
+"glibc>=2.27" -> "glibc" [arrowhead=none, color=grey];
+"readline" -> "libncursesw.so=6-64" [color=chocolate4];
+"libncursesw.so=6-64" -> "ncurses" [arrowhead=none, color=grey];
+"bash" -> "glibc" [color=chocolate4];
+"bash" -> "ncurses" [color=chocolate4];
+"zstd" -> "lz4" [color=chocolate4];
+"lz4" -> "glibc" [color=chocolate4];
+}

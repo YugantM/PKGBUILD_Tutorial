@@ -1,0 +1,15 @@
+digraph G { START [color=red, style=filled];
+node [style=filled, color=green];
+ "START" -> "libpsl";
+"libpsl" -> "libidn2" [color=chocolate4];
+"libidn2" -> "libunistring" [color=chocolate4];
+"libunistring" -> "glibc" [color=chocolate4];
+"glibc" -> "linux-api-headers>=4.10" [color=chocolate4];
+"linux-api-headers>=4.10" -> "linux-api-headers" [arrowhead=none, color=grey];
+"glibc" -> "tzdata" [color=chocolate4];
+"glibc" -> "filesystem" [color=chocolate4];
+"filesystem" -> "iana-etc" [color=chocolate4];
+"libpsl" -> "libidn2.so=0-64" [color=chocolate4];
+"libidn2.so=0-64" -> "libidn2" [arrowhead=none, color=grey];
+"libpsl" -> "libunistring" [color=chocolate4];
+}

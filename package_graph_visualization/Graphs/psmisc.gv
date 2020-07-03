@@ -1,0 +1,14 @@
+digraph G { START [color=red, style=filled];
+node [style=filled, color=green];
+ "START" -> "psmisc";
+"psmisc" -> "ncurses" [color=chocolate4];
+"ncurses" -> "glibc" [color=chocolate4];
+"glibc" -> "linux-api-headers>=4.10" [color=chocolate4];
+"linux-api-headers>=4.10" -> "linux-api-headers" [arrowhead=none, color=grey];
+"glibc" -> "tzdata" [color=chocolate4];
+"glibc" -> "filesystem" [color=chocolate4];
+"filesystem" -> "iana-etc" [color=chocolate4];
+"ncurses" -> "gcc-libs" [color=chocolate4];
+"gcc-libs" -> "glibc>=2.27" [color=chocolate4];
+"glibc>=2.27" -> "glibc" [arrowhead=none, color=grey];
+}

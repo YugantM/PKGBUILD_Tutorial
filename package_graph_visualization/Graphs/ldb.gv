@@ -1,0 +1,22 @@
+digraph G { START [color=red, style=filled];
+node [style=filled, color=green];
+ "START" -> "ldb";
+"ldb" -> "talloc" [color=chocolate4];
+"talloc" -> "glibc" [color=chocolate4];
+"glibc" -> "linux-api-headers>=4.10" [color=chocolate4];
+"linux-api-headers>=4.10" -> "linux-api-headers" [arrowhead=none, color=grey];
+"glibc" -> "tzdata" [color=chocolate4];
+"glibc" -> "filesystem" [color=chocolate4];
+"filesystem" -> "iana-etc" [color=chocolate4];
+"ldb" -> "libtevent.so=0-64" [color=chocolate4];
+"libtevent.so=0-64" -> "tevent" [arrowhead=none, color=grey];
+"tevent" -> "talloc" [color=chocolate4];
+"ldb" -> "tdb" [color=chocolate4];
+"tdb" -> "glibc" [color=chocolate4];
+"ldb" -> "libtdb.so=1-64" [color=chocolate4];
+"libtdb.so=1-64" -> "tdb" [arrowhead=none, color=grey];
+"ldb" -> "popt" [color=chocolate4];
+"popt" -> "glibc" [color=chocolate4];
+"ldb" -> "lmdb" [color=chocolate4];
+"lmdb" -> "glibc" [color=chocolate4];
+}
