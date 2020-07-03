@@ -7,6 +7,8 @@ import csv
 import matplotlib.pyplot as plt
 from matplotlib.artist import Artist
 import networkx as nx
+import regex as re
+from graphviz import Source
 # --------------------------------------------------------------------------------------------------------------------
 
 
@@ -17,8 +19,11 @@ nodes_file = "graph_nodes.csv"
 
 
 # returns output of the command as list of lines
-def lcom(command):
-    return os.popen(command).read().split("\n")
+def lcom(command,split=True):
+    if split:
+        return os.popen(command).read().split("\n")
+    else:
+        return os.popen(command).read().split("\n")
 # --------------------------------------------------------------------------------------------------------------------
 
 
@@ -134,6 +139,7 @@ def sync():
 
 # below code is for generating graph
 # will write proper comments after finalizing the code
+# just palced here for reference if needed
 def draw_graph(graph, labels=None, graph_layout='shell',
                node_size=1000, node_color='blue', node_alpha=0.3,
                node_text_size=12,
@@ -181,8 +187,28 @@ def draw_graph(graph, labels=None, graph_layout='shell',
 
 # draw example
 
-#for each in 
 
+packages = list(sync()[0].index)
+
+# generates tree for each package in the system
+for each_package in packages:
+    
+    tree = lcom("""pactree {0} -g""".format(each_package),split=False)
+
+    with open('./Graphs/{0}.gv'.format(each_package),'w') as out:
+        out.writelines("\n".join(tree))
+
+    src = Source(str("\n".join(tree)))
+
+    src.render('./Graphs/{0}.gv'.format(each_package), format='svg') 
+
+#dot.render('test-output/round-table.gv', view=True) 
+#print([re.sub(r'[^\w\s]','',each).strip(" ").split(" ") for each in tree[3:]])
+
+'''for each in tree:
+    print(each.split("->"))
+'''#for each in 
+'''
 x,y = sync()
 #graph = [("calc", "add"),("calc", "mul"),(22, 23), (23, 24),(24, 25), (25, 20)]
 y = y.head(8)
@@ -191,7 +217,7 @@ y = zip(list(y['node1']),list(y['node2']))
 #print(y)
 draw_graph(list(y))
 
-'''print('printing G2')
+print('printing G2')
 
 G2 = nx.from_pandas_adjacency(sync())
 
