@@ -1,9 +1,9 @@
-pkgname=calc
+pkgname=python-calc
 pkgver=1.0
 pkgrel=1
 pkgdesc="calculator with two functionality, takes three arguments as input."
 arch=("any")
-makedepends=("python" "add" "mul")
+makedepends=("python" "python-add" "python-mul")
 url="https://github.com/YugantM/PKGBUILD_Tutorial/python_calc_module"
 _dir="calc"
 source=("${_dir}"::"git+https://github.com/YugantM/python_calc_module.git")
@@ -18,7 +18,7 @@ build() {
 
 package() {
 
-  cd "${_dir}/python_calc_module"
+  cd "${_dir}"
   python setup.py install --root="$pkgdir/" --optimize=1 --skip-build
 
 }
