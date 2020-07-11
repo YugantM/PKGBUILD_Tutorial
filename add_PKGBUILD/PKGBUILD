@@ -3,10 +3,10 @@ pkgver=1.1
 pkgrel=1
 pkgdesc="Adds to integers, takes two arguments as input."
 arch=("any")
-makedepends=('python','python-setuptools')
+makedepends=('python' 'python-setuptools')
 url="https://github.com/YugantM/PKGBUILD_Tutorial/python_add_module"
 _dir="add"
-source=("${_dir}"::"git+https://github.com/majorx234/python-add.git")
+source=("${_dir}"::"git+https://github.com/yugantm/python_add_module.git")
 md5sums=('SKIP')
 
 build() {
