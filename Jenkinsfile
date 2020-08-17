@@ -7,6 +7,7 @@ stages{
 		steps{
 			sh 'pwd'
 			echo 'desplaying the repo'
+			sh 'ls'
 			sh 'cd ./add_PKGBUILD/'
 			sh 'makepkg'		}
 	}
