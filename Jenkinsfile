@@ -6,9 +6,9 @@ stages{
 	stage('Build'){
 		steps{
 			sh 'pwd'
-			echo 'desplaying the repo'
-			sh 'ls'
+			echo 'desplaying the repo'			
 			sh 'cd ./add_PKGBUILD/'
+			sh 'ls'
 			sh 'makepkg'		}
 	}
 
